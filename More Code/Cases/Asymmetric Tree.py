@@ -23,6 +23,7 @@ from hyperiax.tree.childrenlist import ChildList
 
 
 def main():
+    # Example with Jukes-Cantor Kernel
     key = PRNGKey(42)
 
     # Initial random newick tree
