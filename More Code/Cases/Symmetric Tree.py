@@ -12,10 +12,6 @@ from hyperiax.mcmc import ParameterStore, UniformParameter
 from hyperiax.mcmc.metropolis_hastings import metropolis_hastings
 from hyperiax.mcmc.plotting import trace_plots
 
-import matplotlib.pyplot as plt
-from tqdm import tqdm
-
-import classes
 import functions
 
 # create tree and initialize with noise
@@ -25,6 +21,7 @@ import numpy as np
 
 
 def main():
+    # Example with Jukes-Cantor Kernel
     key = PRNGKey(42)
 
     # Initial random newick tree
