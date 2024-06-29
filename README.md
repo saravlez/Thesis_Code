@@ -21,8 +21,6 @@ To run the notebooks, you will need the following libraries:
 - hyperiax
 - jax
 - numpy
-- scipy
-- scikit-learn
 - BioPython
 - matplotlib
 - Jupyter
