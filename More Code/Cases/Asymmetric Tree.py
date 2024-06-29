@@ -15,11 +15,41 @@ from hyperiax.mcmc import ParameterStore, UniformParameter
 from hyperiax.mcmc.metropolis_hastings import metropolis_hastings
 from hyperiax.mcmc.plotting import trace_plots
 
-import functions
-
 # create tree and initialize with noise
 from hyperiax.tree import HypTree, TreeNode
 from hyperiax.tree.childrenlist import ChildList
+
+
+def jukes_cantor_matrix(alpha):
+    """
+    Generates the Jukes-Cantor matrix for a given alpha value.
+
+    Assume
+     i) each base in the sequence has an equal probability of being substituted, and
+     ii) if a nucleotide substitution occurs, all other nucleotides have the same probability to replace it
+
+    Input:
+        alpha: The probability of substitution
+
+    Output:
+        matrix: Jukes-Cantor transition matrix.
+    """
+    # Conditions
+    if alpha < 0 or alpha >= (1 / 3):
+        raise ValueError("Alpha must be a fraction between 0 and 1/3")
+
+    # 4x4 Transition matrix
+    matrix = np.array([[1 - 3 * alpha, alpha, alpha, alpha],
+                      [alpha, 1 - 3 * alpha, alpha, alpha],
+                      [alpha, alpha, 1 - 3 * alpha, alpha],
+                      [alpha, alpha, alpha, 1 - 3 * alpha]])
+
+    # Probability Matrix rows check
+    if np.all((np.sum(matrix, axis=1)) != 1):
+        raise ValueError("The rows are not equal to 1")
+
+    # print(f"kernel :\n{matrix}")
+    return matrix
 
 
 def main():
