@@ -12,7 +12,7 @@ This repository contains all the coding implemented for my thesis on statistical
 - **Kimura_3_Model.ipynb**: Implementation of the Kimura Model with 3 parameters for phylogenetic inference.
 - **Kimura_4_Model.ipynb**: Implementation of the Kimura Model with 4 parameters for phylogenetic inference.
 - **Images Folder**: Graphs and diagrams used in the final thesis paper.
-- **Additional Code Folder**: Additional phyton files with other experiments.
+- **More Code Folder**: Additional phyton files with other experiments.
 
 ## Prerequisites
 
