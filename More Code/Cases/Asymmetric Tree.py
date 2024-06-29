@@ -113,7 +113,7 @@ def main():
     km10 = lambda params: jnp.diag([pi1, pi2, pi3, pi4])
 
     # inner node
-    kst = lambda params: functions.jukes_cantor_matrix(params['alpha'])
+    kst = lambda params: jukes_cantor_matrix(params['alpha'])
 
     # leaves
     lambdi = lambda params: jnp.eye(R)
