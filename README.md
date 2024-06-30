@@ -1,4 +1,4 @@
-# Statistical Inference on Phylogenetic Trees
+# Inference on Phylogenetic Trees implementation
 This repository contains all the coding implemented for my thesis on statistical inference of phylogenetic trees. The Jupyter notebooks include the code and analysis techniques used to analyse the tree construction and inference, with the help of the Hyperiax library, https://github.com/ComputationalEvolutionaryMorphometry/hyperiax.
 
 ## Contents
